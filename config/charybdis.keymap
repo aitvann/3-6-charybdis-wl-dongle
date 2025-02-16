@@ -1,9 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     trackball_listener {
@@ -104,6 +103,18 @@
         underscore-symbol {
             bindings = <&kp UNDERSCORE>;
             key-positions = <26 27>;
+        };
+
+        dongle-reset-left {
+            bindings = <&bootloader>;
+            key-positions = <29 17>;
+            layers = <1>;
+        };
+
+        dongle-reset-right {
+            bindings = <&bootloader>;
+            key-positions = <18 30>;
+            layers = <2>;
         };
     };
 
